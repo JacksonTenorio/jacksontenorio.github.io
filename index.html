@@ -17,38 +17,48 @@
             margin: 0;
         }
         h1 {
-            margin-bottom: 30px;
-            font-size: 24px;
+            margin-bottom: 40px;
+            font-size: 32px;
             color: #38bdf8;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px; /* Espaçamento maior entre os botões */
             width: 100%;
-            max-width: 320px;
+            max-width: 360px; /* Botões um pouco mais largos */
         }
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 20px;
+            padding: 18px 24px;
             background-color: #1e293b;
             color: #f8fafc;
             text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 16px;
-            border: 1px solid #334155;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 16px; /* Bordas mais arredondadas */
+            font-weight: 600;
+            font-size: 18px;
+            border: 2px solid transparent; /* Borda invisível por padrão */
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.2);
         }
         .btn:hover {
             background-color: #38bdf8;
             color: #0f172a;
             border-color: #38bdf8;
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
         }
+        /* Ícones dentro dos botões */
+        .btn::before {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        .btn-immich::before { content: '📸'; }
+        .btn-files::before { content: '📁'; }
+
     </style>
 </head>
 <body>
@@ -56,11 +66,11 @@
     <h1>Meus Serviços</h1>
 
     <div class="container">
-        <!-- Substitua pelo link atual do Immich -->
-        <a href="https://player-semi-aluminum-committees.trycloudflare.com" class="btn" target="_blank">📸 Immich (Fotos)</a>
+        <!-- Botão Immich -->
+        <a href="https://player-semi-aluminum-committees.trycloudflare.com" class="btn btn-immich" target="_blank">Immich (Fotos)</a>
         
-        <!-- Substitua pelo link do File Browser quando configurar -->
-        <a href="https://ruby-became-eds-webcast.trycloudflare.com"_blank">📁 File Browser (Arquivos)</a>
+        <!-- Botão File Browser (Adicione o seu link do Cloudflare aqui) -->
+        <a href="https://ruby-became-eds-webcast.trycloudflare.com" target="_blank">File Browser (Arquivos)</a>
     </div>
 
 </body>
